@@ -2,8 +2,7 @@
 <Resources Culture="uk-UA">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Realty list page" />
-			<Item Name="LocalizableStrings.RefreshButtonCaption.Value" Value="Refresh" />
+			<Item Name="Caption" Value="Realty form page (Business rules)" />
 		</Items>
 	</Group>
 </Resources>
