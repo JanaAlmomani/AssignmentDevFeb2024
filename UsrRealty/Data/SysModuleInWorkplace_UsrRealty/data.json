@@ -1,14 +1,54 @@
-{
+﻿{
   "PackageData": [
     {
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "8f944bfa-72d2-4464-8da3-cba60f2a243a"
+          "Value": "5f1d8085-028b-4a7d-a17a-81d50e42031b"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "c10fb747-57f1-4790-aad3-c3f4da6d6c58",
+          "DisplayValue": "Studio"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "440ff6fe-30d5-4ee0-828e-58fdfecad7d0",
+          "DisplayValue": "Realty"
         },
         {
           "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
-          "Value": 26
+          "Value": 0
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "6bc838a0-9530-4424-80ea-0d83ebd6d970"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "c10fb747-57f1-4790-aad3-c3f4da6d6c58",
+          "DisplayValue": "Studio"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "5071277c-27f2-4d5f-83da-0ed00d04ffee",
+          "DisplayValue": "Process library"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 1
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "af4f7b4d-aeee-44d5-9ca0-d24a328b41f4"
         },
         {
           "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
@@ -19,6 +59,10 @@
           "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
           "Value": "440ff6fe-30d5-4ee0-828e-58fdfecad7d0",
           "DisplayValue": "Realty"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 26
         }
       ]
     }
