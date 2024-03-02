@@ -6,7 +6,9 @@
 			<Item Name="LocalizableStrings.addRecord_33xgf7l_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_atyr7ya_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_vxid16g_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.AreaCannotBeLess.Value" Value="Area must be grater than 0 sq ft" />
 			<Item Name="LocalizableStrings.NumberInput_5t4a8zv_label.Value" Value="Commission percent, from 0 to 10" />
+			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price must be grater than 0" />
 		</Items>
 	</Group>
 </Resources>
