@@ -7,6 +7,13 @@
 			<Item Name="LocalizableStrings.addRecord_atyr7ya_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_vxid16g_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.AreaCannotBeLess.Value" Value="Area must be grater than 0 sq ft" />
+			<Item Name="LocalizableStrings.ExpansionPanel_fjouq4o_title.Value" Value="Realty visits" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_z64sjtx_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_6v20382_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_5g5fr3i_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_2t9u823_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_d2q0yug_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_mfv1pfo_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.NumberInput_5t4a8zv_label.Value" Value="Commission percent, from 0 to 10" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price must be grater than 0" />
 		</Items>
