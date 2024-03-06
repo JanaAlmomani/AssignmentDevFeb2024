@@ -1,3 +1,4 @@
+/* jshint esversion: 11 */
 define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
@@ -667,7 +668,13 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"PDS_UsrComment_lnmww9b": {
 						"modelConfig": {
 							"path": "PDS.UsrComment"
-						}
+						},
+						 "validators": {
+                /* Flag the field as required. */
+               		 "required": {
+                    "type": "crt.Required"
+                }
+            }
 					},
 					"PDS_UsrType_tpflfg2": {
 						"modelConfig": {
@@ -802,23 +809,43 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
-		handlers: /**SCHEMA_HANDLERS*/[
-			{
-				request: "crt.HandleViewModelAttributeChangeRequest",
-				/* The custom implementation of the system query handler. */
-				handler: async (request, next) => {
-					if (request.attributeName === 'PDS_UsrPriceUSD_h7cjz7t' || 						// if price changed
-					   request.attributeName === 'PDS_UsrOfferTypeUsrCommissionPercent' ) { 		// or percent changed
-						var price = await request.$context.PDS_UsrPriceUSD_h7cjz7t;
-						var percent = await request.$context.PDS_UsrOfferTypeUsrCommissionPercent;
-						var commission = price * percent / 100;
-						request.$context.PDS_UsrCommissionUSD_612fj9k = commission;
-					}
-					/* Call the next handler if it exists and return its result. */
-					return next?.handle(request);
-				}
-			}
-		]/**SCHEMA_HANDLERS*/,
+handlers: /**SCHEMA_HANDLERS*/[
+    {
+        request: "crt.HandleViewModelAttributeChangeRequest",
+        /* The custom implementation of the system query handler. */
+        handler: async (request, next) => {
+            if (request.attributeName === 'PDS_UsrPriceUSD_h7cjz7t' || request.attributeName === 'PDS_UsrOfferTypeUsrCommissionPercent') {
+                var price = await request.$context.PDS_UsrPriceUSD_h7cjz7t;
+                var percent = await request.$context.PDS_UsrOfferTypeUsrCommissionPercent;
+                var commission = price * percent / 100;
+                request.$context.PDS_UsrCommissionUSD_612fj9k = commission;
+            }
+            /* Call the next handler if it exists and return its result. */
+            return next?.handle(request);
+        }
+    },
+
+	    {
+        request: "crt.HandleViewModelAttributeChangeRequest",
+        /* The custom implementation of the system query handler. */
+        handler: async (request, next) => {
+            
+               const priceUSD = await request.$context.PDS_UsrPriceUSD_h7cjz7t;
+            	const comment = await request.$context.PDS_UsrComment_lnmww9b;
+              
+                 if (priceUSD > 10000) {
+                    /* If the request is new, apply the required validator to the UsrDescription attribute. */
+                    request.$context.enableAttributeValidator('PDS_UsrComment_lnmww9b', 'required');
+                } else {
+                    /* Do not apply the required validator to the UsrDescription attribute for non-new requests. */
+                    request.$context.disableAttributeValidator('PDS_UsrComment_lnmww9b', 'required');
+                }
+           
+            /* Call the next handler if it exists and return its result. */
+            return next?.handle(request);
+        }
+    }
+]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{
 						/* The validator type must contain a vendor prefix.
