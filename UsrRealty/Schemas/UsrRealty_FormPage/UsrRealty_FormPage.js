@@ -833,7 +833,7 @@ handlers: /**SCHEMA_HANDLERS*/[
                const priceUSD = await request.$context.PDS_UsrPriceUSD_h7cjz7t;
             	const comment = await request.$context.PDS_UsrComment_lnmww9b;
               
-                 if (priceUSD > 10000) {
+                 if (priceUSD > 50000) {
                     /* If the request is new, apply the required validator to the UsrDescription attribute. */
                     request.$context.enableAttributeValidator('PDS_UsrComment_lnmww9b', 'required');
                 } else {
